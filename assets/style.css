@@ -1,0 +1,544 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", Verdana, sans-serif;
+  overflow: hidden;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+.container-1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: linear-gradient(45deg, rgb(89, 47, 250) 30%, rgb(128, 59, 194));
+}
+
+/* CONTAINER CARD FRONT AND BACK */
+.content {
+  background: #fff;
+  box-shadow: -30px 20px 60px rgb(24, 4, 143);
+  width: 960px;
+  height: 50%;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+}
+
+.content::before {
+  content: "";
+  background: linear-gradient(45deg, rgb(89, 47, 250) 30%, rgb(128, 59, 194));
+  position: absolute;
+  left: 0;
+  width: 40%;
+  height: 100%;
+
+  left: 0;
+}
+
+/* CONTAINER FRONT */
+.title {
+  font-size: 1.7rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.title-primary {
+  color: #ffffff;
+}
+
+.title-second {
+  color: rgb(89, 47, 250);
+}
+
+.description {
+  font-size: .9rem;
+  font-weight: 300;
+  line-height: 30px;
+}
+
+.description-primary {
+  color: #ffffff;
+}
+
+.description-second {
+  color: #bdc3c7;
+}
+
+/* BOTÃO */
+.btn {
+  text-transform: uppercase;
+  margin-top: 10px;
+  color: #ffffff;
+  font-size: .8rem;
+  padding: 10px 40px;
+  cursor: pointer;
+  transition: .4s ease;
+  width: 150px;
+  align-self: center;
+  border: none;
+  margin-top: 1rem;
+}
+
+.btn-primary {
+  border: 1px solid #fff;
+  background: transparent;
+  transition: background-color .5s ease;
+}
+
+.btn-primary:hover {
+  background: #ffffff;
+  color: rgb(89, 47, 250);
+  font-weight: bold;
+}
+
+.btn-second {
+  background: rgb(89, 47, 250);
+  border: 1px solid rgb(89, 47, 250);
+  transition: background-color .5s ease;
+}
+
+.btn-second:hover {
+  background: #ffffff;
+  color: rgb(89, 47, 250);
+  border: 1px solid rgb(89, 47, 250);
+  font-weight: bold;
+}
+
+.password {
+  color: rgb(24, 4, 143);
+  font-size: 14px;
+  margin: 15px 0;
+  text-align: center;
+}
+
+.password::first-letter{
+  text-transform: capitalize;
+}
+
+.first-content {
+  display: flex;
+}
+
+.first-content .second-column{
+  z-index: 11;
+}
+
+.first-column {
+  text-align: center;
+  width: 40%;
+  z-index: 10;
+}
+
+.second-column {
+  display: flex;
+  width: 60%;
+  flex-direction: column;
+  align-items: center;
+}
+
+.social-media {
+  margin: 1rem 0;
+}
+
+.link-social-media:not(:first-child) {
+  margin-left: 10px;
+}
+
+.list-social-media {
+  display: flex;
+  list-style: none;
+}
+
+/* LINK SOCIAL MEDIA */
+.item-social-media {
+  color: #95a5a6;
+  border: 1px solid #bdc3c7;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  text-align: center;
+  line-height: 35px;
+  text-align: center;
+  transition: background-color .5s ease;
+}
+
+.link-social-media .item-social-media:hover {
+  background: linear-gradient(180deg, rgb(89, 47, 250) 30%, rgb(128, 59, 194));
+  color: #ffffff;
+  border: none;
+}
+
+/* FORMULARIO */
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 55%;
+}
+
+.form input {
+  width: 100%;
+  height: 45px;
+  border: none;
+  background: #f0f1f0f1;
+}
+
+.label-input {
+  background-color: #ecf0f1;
+  display: flex;
+  align-items: center;
+  margin: 8px;
+  border: none;
+}
+
+.icon-modify {
+  color: #7f8c8d;
+  padding: 0 10px;
+}
+
+.form input:focus {
+  outline: 0;
+  font-weight: 600;
+}
+
+.first-column {
+  text-align: center;
+  padding: 20px;
+}
+
+
+/* CONTAINER BACK */
+.second-content {
+  display: flex;
+  position: absolute;
+}
+
+.second-content .first-column{
+  order: 2;
+  z-index: -1;
+}
+
+.second-content .second-column{
+  order: 1;
+  z-index: -1;
+}
+
+
+/*  FLIP CARD WITH CSS AND JS  */
+.sign-in-js .first-content .first-column {
+  z-index: -1;
+}
+
+.sign-in-js .second-content .second-column {
+  z-index: 11;
+}
+
+.sign-in-js .second-content .first-column{
+  z-index: 13;
+}
+
+.sign-in-js .content::before{
+  left: 60%;
+  animation: slidein .6s;
+
+  z-index: 12;
+}
+
+.sign-up-js .content::before{
+  animation: slideout .6s;
+  z-index: 12;
+}
+
+.sign-up-js .second-content .first-column,
+.sign-up-js .second-content .second-column{
+  z-index: -1;
+}
+
+.sign-up-js .first-content .second-column {
+  z-index: 11;
+}
+
+.sign-up-js .first-content .first-column{
+  z-index: 13;
+}
+
+/* DESLOCAMENTO DO CONTEÚDO ATRÁS DO CONTENT:BEFORE */
+.sign-in-js .first-content .second-column{
+  z-index: -1;
+  position: relative;
+  animation: deslocamentoEsq .6s;
+}
+
+.sign-up-js .second-content .second-column{
+  position: relative;
+  z-index: -1;
+  animation: deslocamentoDir .6s;
+}
+
+
+/* ANIMAÇÃO CSS PARA O CONTEÚDO */
+@keyframes deslocamentoEsq{
+  form{
+    left: 0;
+    opacity: 1;
+  }
+
+  25%{
+    left: -80px;
+    opacity: .5;
+  }
+
+  50%{
+    left: -100px;
+    opacity: .2;
+  }
+
+  to{
+    left: -110px;
+    opacity: 0;
+  }
+}
+
+@keyframes deslocamentoDir {
+  form {
+    left: 0;
+    opacity: 1;
+  }
+
+  25% {
+    left: 80px;
+    opacity: .5;
+  }
+
+  50% {
+    left: 100px;
+    opacity: .2;
+  }
+
+  to {
+    left: 110px;
+    opacity: 0;
+  }
+}
+
+
+/*  ANIMAÇÃO CSS    */
+@keyframes slidein{
+
+  from {
+    left: 0;
+    width: 40%;
+  }
+
+  25%{
+    left: 5%;
+    width: 50%;
+  }
+
+  50%{
+    left: 20%;
+    width: 60%;
+  }
+
+  75%{
+    left: 45%;
+    width: 50%;
+  }
+
+  to {
+    left: 60%;
+    width: 40%;
+  }
+}
+
+@keyframes slideout {
+
+  from {
+    left: 60%;
+    width: 40%;
+  }
+
+  25% {
+    left: 45%;
+    width: 50%;
+  }
+
+  50% {
+    left: 25%;
+    width: 60%;
+  }
+
+  75% {
+    left: 5%;
+    width: 50%;
+  }
+
+  to {
+    left: 0;
+    width: 40%;
+  }
+}
+
+
+/*VERSÃO MOBILE*/
+@media screen and (max-width: 1040px) {
+  .content {
+    width: 100%;
+    height: 100%;
+  }
+
+  .content::before {
+    width: 100%;
+    height: 40%;
+    top: 0;
+  }
+
+  .first-content,
+  .second-content {
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .first-column,
+  .second-column {
+    width: 100%;
+  }
+
+  .sign-in-js .content::before {
+    top: 60%;
+    left: 0;
+    border-radius: 0;
+
+  }
+
+  .form {
+    width: 90%;
+  }
+
+  /* ANIMAÇÃO MOBILE CSS*/
+
+  @keyframes deslocamentoEsq {
+
+    from {
+      top: 0;
+      opacity: 1;
+      z-index: 12;
+    }
+
+    25% {
+      top: -80px;
+      opacity: .5;
+    }
+
+    50% {
+      top: -100px;
+      opacity: .2;
+    }
+
+    to {
+      top: -110px;
+      opacity: 0;
+      z-index: -1;
+    }
+  }
+
+
+  @keyframes deslocamentoDir {
+
+    from {
+      top: 0;
+      z-index: 12;
+    }
+
+    25% {
+      top: 80px;
+    }
+
+    50% {
+      top: 100px;
+    }
+
+    to {
+      top: 110px;
+      z-index: -1;
+    }
+  }
+
+
+
+  @keyframes slidein {
+
+    from {
+      top: 0;
+      height: 40%;
+    }
+
+    25% {
+      top: 5%;
+      height: 50%;
+    }
+
+    50% {
+      top: 25%;
+      height: 60%;
+    }
+
+    75% {
+      top: 45%;
+      height: 50%;
+    }
+
+    to {
+      top: 60%;
+      height: 40%;
+    }
+  }
+
+  @keyframes slideout {
+
+    from {
+      top: 60%;
+      height: 40%;
+    }
+
+    25% {
+      top: 45%;
+      height: 50%;
+    }
+
+    50% {
+      top: 25%;
+      height: 60%;
+    }
+
+    75% {
+      top: 5%;
+      height: 50%;
+    }
+
+    to {
+      top: 0;
+      height: 40%;
+    }
+  }
+
+}
+
+@media screen and (max-width: 740px) {
+  .form {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .form {
+    width: 100%;
+  }
+}
